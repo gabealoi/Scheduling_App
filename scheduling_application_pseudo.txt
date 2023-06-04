@@ -1,0 +1,19 @@
+user must enter/create an employee object
+-this object will be a python object
+-the user will be prompted to submit an excel of employee info with pandas
+	> the info provided will be formatted as follows:
+		*last name, first name
+		*day of the week availability with hours
+		*employee_id
+
+a relational database of employees and their respective shifts will exist
+-this will be created through a python script
+	>the python script will have the constraints for what to create 	for a row's time based on the entered availability parameters 	and the requested hours parameter read in from the excel
+		*this means that the python script will dictate what to 		populate a row with, not SQL
+
+
+once all information is processed from the backend, a scheduling algo will need to be generated from chatGPT based on the information provided from the user
+-this algo will be integrated into the program after aggregating all of the employee's data correctly
+
+
+the scheduling algo will put an excel sheet together with pandas using a python script in order to display the work week's schedule
