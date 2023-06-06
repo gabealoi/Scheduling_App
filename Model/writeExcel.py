@@ -1,8 +1,6 @@
 import pandas as pd
 from datetime import datetime
-import os
-
-from .Employee import Employee
+import os, subprocess
 
 def writeOutput(schedule=dict, emps=list):
     # format the schedule dict
@@ -47,6 +45,9 @@ def writeOutput(schedule=dict, emps=list):
 
 
     output_excel.close()
+
+    # open download directory after generating Excel file
+    subprocess.Popen(['explorer', output_directory.replace('/', '\\')])
 
 
 

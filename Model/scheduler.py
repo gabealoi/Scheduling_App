@@ -86,7 +86,9 @@ def makeSchedule(empInfo=dict):
                 if end_time.replace(hour=0, minute=0, second=0, microsecond=0) <= end_time < end_time.replace(hour=8, minute=15, second=0, microsecond=0):
                     end_time = datetime.strptime("00:00", "%H:%M")
                     dMins = abs(end_time.minute - start_time.minute) / 60
-                    duration = 12 - (abs(end_time.hour - start_time.hour) - 11 + dMins)
+                    duration = abs(12 - (abs(end_time.hour - start_time.hour) + dMins))
+
+                    
 
                 # Create a shift object
                 shift = Shift(employee.getID(), start_time, end_time, duration)

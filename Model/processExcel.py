@@ -71,7 +71,7 @@ def readAvailabilitiesFromExcel():
 
 
             # make an availability object of the information
-            aval = Availability(avalInfo[0], avalInfo[1], avalInfo[2], avalInfo[3])
+            aval = Availability(avalInfo[0], avalInfo[1], None if type(avalInfo[2]) == float else avalInfo[2], None if type(avalInfo[3]) == float else avalInfo[3])
             allAvals.append(aval)
 
         return allAvals
