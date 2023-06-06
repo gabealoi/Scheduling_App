@@ -21,6 +21,12 @@ class Shift:
         return self.duration
     
 
+
+    def toDict(self):
+        shift = {'ID':self.id, 'Name':"?", 'Start_Time':str(self.sTime.time()), 'End_Time':str(self.eTime.time()), 'Duration':self.duration}
+        return shift
+    
+
     # string override
     def __str__(self) -> str:
         formatted_start_time = self.sTime.strftime("%H:%M")
